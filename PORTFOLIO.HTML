@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta http-equiv="refresh" content="2;url=Login.html "/>   -->
+    <title>Valipi Portfolio.com</title>                              <!-- THIS META TAG IS REDIRECT THE WEB PAGE -->
+    <link rel="icon" href="./Star.logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+         body{
+            background-color: ghostwhite;
+            width: 100%;
+            height: 100%;
+        }
+        button a{  
+            text-decoration: none;
+            grid-area: 100px;
+           
+        }
+        ul li a:hover{
+            background-color:gray;
+            border-radius: 10px;
+        }
+        .mainheader{
+          padding: 10px;
+          background-color: whitesmoke;
+          width: 100%;
+        }
+  </style>
+  <style>
+        
+    .contact{
+        position: relative;
+        padding: 63px 200px ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color:#666;
+        background-size: cover;
+    }
+    .contact .content{
+        max-width: 800px;
+        text-align: center;
+    }
+    .contact .content h2{
+        font-size: 40px;
+        font-weight: 500;
+        color: #fff;
+        
+    }
+    .contact .content p{
+        font-weight: 500;
+        color: #fff;
+        padding-top: 30px;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+    }
+    .container .contactInfo{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    .container .contactInfo .box{
+        position: relative;padding: 20px 0;
+        display: flex;
+    }
+    .container .contactInfo .box .icon{
+        min-width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 25px;
+    }
+    .container .contactInfo .box .icon .text{
+        display: flex;
+            margin-left: 25px;
+            font-size: 16px;
+            color: #fff;
+            flex-direction: column;
+            font-weight: 300px;
+    }
+    .container .contactInfo .box .icon .text h3{
+        font-weight: 500px;
+        color: #00bcd4;;
+    }
+    
+    .contactForm{
+		width: 40%;
+		padding: 40px;
+		border-radius: 10px;
+	}
+	.contactForm h2{
+		font-size: 30px;
+		color: #333;
+		font-weight: 500;
+	}
+	.contactForm .inputbox{
+    	position: relative;
+    	width: 100%;
+    	margin-top: 10px;
+	}
+	.contactForm .inputbox input,
+	.contactForm .inputbox textarea{
+		width: 100%;
+		padding: 5px 0;
+		font-size: 18px;
+		margin: 10px 0;
+		border: none;
+		border-bottom: 2px solid #333;
+		outline: none;
+		resize: none;
+	}
+	.contactForm .inputbox span{
+		position: absolute;
+		left: 0;
+		padding: 5px 0;
+		font-size: 16px;
+		margin: 10px 0;
+		pointer-events: none;
+		transition: 0.5s;
+		color: #666;
+
+	}
+	.contactForm .inputbox input:focus ~ span,
+	.contactForm .inputbox input:valid ~ span,
+	.contactForm .inputbox textarea:focus ~ span,
+	.contactForm .inputbox textarea:valid ~ span{
+
+		color: #e91e63;
+		font-size: 14px;
+		transform: translateY(-20px);
+	}
+	.contactForm .inputbox input[type="submit"]{
+		width: 100%;
+		background-color: #00bcd4;
+		color: white;
+		background: none;
+		cursor: pointer;
+		padding: 10px;
+	}
+	@media (max-width:991px) {
+		.contact{
+    		padding: 50px;
+		}
+		.container{
+    		flex-direction: column;
+		}
+		.container .contactInfo,
+ 		.contactForm{
+   			 width: 100%;
+		}
+	}
+	
+		.card1 {
+     		width: 100%;
+       		background-color:whitesmoke;
+      	}
+       .ionicon{
+       	 width: 50px;
+         height: auto;
+      }
+  
+</style>
+
+
+</head>
+<body>
+    
+<div class="mainheader">        
+  <div class="navbar navbar-expand-lg navbar-expand-md  bg-body-tertiary container-fluid">
+    <nav class="navbar bg-body-tertiary">
+       <div class="container-fluid">
+           <img src="./Star.logo.png"  width="40" height="40" class="d-inline-block align-text-top">
+        </div>
+    </nav>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="navbar-collapse collapse" id="menu"  style=" margin-right: 100px; ">
+          <ul class="navbar-nav ms-auto" style="font-weight: 500;">
+            <li class="nav-item"><a href="#" class="nav-link active" style="margin-right: 2px; font-weight: bold; ">Home</a></li>
+            <li class="nav-item"><a href="#Educations" class="nav-link active" style="margin-right: 2px;font-weight: bold; ">Education</a></li>
+            <li class="nav-item"><a href="#Services" class="nav-link active" style="margin-right: 2px;font-weight: bold; ">Services</a></li>
+            <li class="nav-item"><a href="#Contacts" class="nav-link active" style="margin-right: 2px;font-weight: bold; ">Contact</a></li>
+            <li class="nav-item"><a href="#Abouts" class="nav-link active" style="margin-right: 2px;font-weight: bold; ">About Me</a></li>
+            <li class="nav-item"><a href="#Projects" class="nav-link active" style="margin-right: 2px;font-weight: bold; ">Projects</a></li>            
+    <div class="d-grid gap-2 d-md-block" >
+        <button class="btn btn-primary  btn-outline-success"type="button"><a href="./LOGOUT.HTML"  style="color: white; font-weight: bold; " onclick="logout()" >Logout</a></button>
+        <button  class="btn btn-primary  btn-outline-success"type="button" id="login-button"><a  style="color: white; font-weight: bold; " href="./LOGIN.HTML" onclick="login()">Login</a></button>
+
+        <script>
+        function logout() {
+        alert("Are you Succussfully Logout")
+        }
+        function login() {
+			alert("Are you login Valipi Portfolio.com")
+		}
+          // Function to handle the login process
+      function handleLogin() {
+        // Here, you would implement your actual login validation process
+        // For demonstration purposes, let's assume a successful login
+        const isLoggedIn = true;
+      
+        if (isLoggedIn) {
+          // Hide the login button
+          document.getElementById('login-button').style.display = 'none';
+      
+          // Store the login status in session storage
+          sessionStorage.setItem('isLoggedIn', true);
+        } else {
+          // If the login is unsuccessful, redirect to the login page
+          window.location.href = 'LOGIN.HTML';
+        }
+      }
+      
+      // Attach the login button click event handler
+      document.getElementById('login-button').addEventListener('click', handleLogin);
+      
+      // Check if the user is already logged in (when the page is loaded)
+      document.addEventListener('DOMContentLoaded', function() {
+        const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+      
+        if (isLoggedIn) {
+          // Hide the login button
+          document.getElementById('login-button').style.display = 'none';
+        }
+      });
+      
+      </script>
+
+
+
+
+
+    </div>
+           </ul>
+      </div>
+    </div>
+</div>
+
+<div class="card text-bg-dark" >
+  <img src="./BACKGROUND1.avif" class="card-img" alt="..." height="800px" style="object-fit: cover;">
+     <div class="card-img-overlay" style="text-align: center; padding-top: 200px;">
+        <h2 class="card-title" style="font-size: 50PX; font-family: serif; color: white; font-weight: bold; ">VALIPI CHANDU,</h2>
+        <p class="card-text" style="font-size: xx-large; ">a <span style="color: yellow; font-family: sans-serif; font-weight: bold; ">Full Stack Developer.</span></p>
+         <p class="card-text"><small style="color: grey; font-size: large; font-weight: bold;">**Star</small></p>
+         <button class="btn btn-primary" type="button" style="background-color: blue;margin-left: 30px;"><a href="./CHANDU VALIPI.pdf" style="color:white; font-weight: bold;  "  download>Download Resume</a></button>
+         <button class="btn btn-primary" type="button" style="background-color: blue;"> <a href="#Contacts" style="color: white; font-weight: bold; ">Hire me</a></button>
+     <ul style=" padding-top: 30px; ">
+      <a href="https://www.facebook.com/"> <svg xmlns="http://www.w3.org/2000/svg" style="background-color: white; border-radius: 10px;" class="ionicon" viewBox="0 0 512 512"><path d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z" fill-rule="evenodd"/></svg></a>     
+      <a href="https://www.instagram.com/"><svg xmlns="http://www.w3.org/2000/svg" style="background-color: white; border-radius: 10px;"  class="ionicon" viewBox="0 0 512 512"><path d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"/><path d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"/></svg></a>
+      <a href="https://www.linkedin.com/feed/"><svg xmlns="http://www.w3.org/2000/svg"style="background-color: white; border-radius: 10px;"  class="ionicon" viewBox="0 0 512 512"><path d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z"/></svg></a>
+      <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den">  <svg xmlns="http://www.w3.org/2000/svg" style="background-color: white; border-radius: 10px;"  class="ionicon" viewBox="0 0 512 512"><path d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"/></svg></a>
+     <a href="https://web.telegram.org/a/"> <img src="./telegram (1).png" style="background-color: white; border-radius: 10px;"  width="50px " height="50px" alt=""></a>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+<style>
+  .card-group {
+    gap: 100px;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  @media (max-width: 576px) {
+    .card-group {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  }
+    .sales-heading h1{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 50px;
+    font-family: serif;
+  }
+</style>
+
+<div class="sales-heading" id="Educations"><h1>EDUCATION DETAILS</h1></div>
+
+<div class="card-group">
+  <div class="LATEST-PROPERTIES-SALE">
+    <div class="card" style="width: 23rem;">
+      <img src="./SCHOOL.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: bold; ">Board of Secondary education.</h5>
+        <h6>ZP High School, Somala.</h6>
+        <h6>Telugu meadiam Student.</h6>
+        <p class="card-text"><span style="color: block; font-weight: bold;">Address :</span> Somala Govt Hospital near by location <a style="text-decoration: none;" href="https://www.google.com/maps/place/Zp+High+School,+Somala,+Andhra+Pradesh+517257/@13.4755916,78.8095751,75m/data=!3m1!1e3!4m14!1m7!3m6!1s0x3bb2856220616b9d:0x96ca757112b3543d!2sZ.P.High+School!8m2!3d13.4756514!4d78.8094492!16s%2Fg%2F11f3ttq_j1!3m5!1s0x3bb285622708aa0f:0xeb5f6c303772a703!8m2!3d13.4756506!4d78.8098587!16s%2Fg%2F11bvtch3n2?entry=ttu">Z.P high School.</a></p>
+        <a href="#Contacts" class="btn btn-primary" style="margin-left: 100px; font-weight: bold; ">Get Contact.</a>
+      </div>
+    </div>
+  </div>
+  <div class="LATEST-PROPERTIES-SALE">
+    <div class="card" style="width: 23rem;">
+      <img src="./JR clg.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: bold; ">Board of Intermediate Education.</h5>
+        <h6>S.K.V.N Govt Jr College, Somala.</h6>
+        <h6>History Economics Civics (HEC)</h6>
+        <p class="card-text"><span style="color: block; font-weight: bold;">Address :</span> Somala to Tirupati Road near by Airtel Tower  <a style="text-decoration: none;" href="https://www.google.com/maps/place/Kollavenkataramanareddy+government+Junior+Collage/@13.479101,78.8099709,491m/data=!3m1!1e3!4m14!1m7!3m6!1s0x3bb2856220616b9d:0x96ca757112b3543d!2sZ.P.High+School!8m2!3d13.4756514!4d78.8094492!16s%2Fg%2F11f3ttq_j1!3m5!1s0x3bb28f899224dc03:0xcf8564d67b32d14f!8m2!3d13.4792252!4d78.8091189!16s%2Fg%2F11g9qgrkrg?entry=ttu">S.K.V.N Govrt Jr College.</a></p>
+        <a href="#Contacts" class="btn btn-primary"  style="margin-left: 100px; font-weight: bold; " >Get Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="LATEST-PROPERTIES-SALE">
+    <div class="card" style="width: 23rem;">
+      <img src="./SDHR.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: bold; ">Under S.V University, Tirupati.</h5>
+        <h6>S.D.H.R Degree & PG College, Tirupati.</h6>
+        <h6>Bachelor's of Computer Applications (BCA)</h6>
+        <p class="card-text"><span style="color: block; font-weight: bold;">Address :</span> Tirupati Air bypass road new Balaji colony Oposite Police ground  <a style="text-decoration: none;" href="https://www.google.com/maps/place/SDHR+Junior,+Degree+%26+PG+College/@13.6203395,79.4125774,215m/data=!3m1!1e3!4m6!3m5!1s0x3a4d4b128ca91639:0x4a9fe1e22e437c1c!8m2!3d13.6204212!4d79.4127466!16s%2Fg%2F1pyqs1p8l?entry=ttu">S.D.H.R College.</a> </p>
+        <a href="#Contacts" class="btn btn-primary"  style="margin-left: 100px; font-weight: bold; ">Get Contact</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+    .selesflats{
+      gap: 100px;
+    position: relative;
+    padding: 2% 20% 2% 20%;
+    }
+    .card-text p{
+      font-family: serif;
+    }
+    .card-title{
+      font-family: sans-serif; 
+      font-weight: 500; 
+      color: goldenrod;
+    }
+  .project h1{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 50px;
+    font-family: serif;
+  }
+</style>
+  <div class="project" id="Projects"><h1>PROJECTS</h1></div>
+
+<div class="selesflats">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="./Portfolio img.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: bold; ">Portfolio Web Application</h5>
+          <p class="card-text">Developed a personal portfolio web application to showcase my skills and project. Utilized HTML, CSS and JavaScript to build a responsive and visually appealing layout.</p>
+          <p># two or three of your most significant projects. Choose those that demonstrate a range of skills, technologies, and problem-solving abilities. Explain the context, challenges, and results for each project.</p>
+          <p># explain that your application is responsive, ensuring a seamless experience across different devices. Mention any specific techniques or frameworks used for responsiveness.</p>
+          <p># If relevant, mention the testing practices you followed to ensure the reliability and functionality of your application.</p>
+          <a href="./Portfolio.html" class="btn btn-primary" style="font-weight: bold; "> Go Portfolio</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="./real-estate.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: bold; ">Real-Estate Web Application</h5>
+          <p class="card-text">A real estate web application is an online platform designed to facilitate buying, selling, renting, and managing properties. It serves as a central hub for real estate transactions, bringing together buyers, sellers, agents, and property managers. Here's a brief explanation of the content you may want to include in your real estate web application.</p>
+          <p># The homepage is the first point of contact for visitors. It should have an attractive design, featuring a search bar to help users quickly find properties based on location, type, price range, and other filters. Highlight key features of your platform here.<p></p>
+            <p># This section displays a comprehensive list of available properties for sale or rent. Each listing should include essential details, such as property type, location, price, number of bedrooms/bathrooms, and high-quality flats.</p>
+            <a href="./" class="btn btn-primary" style="font-weight: bold; ">Go Real-Estate</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="./time pic.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: bold; ">Timing Web page </h5>
+          <p class="card-text">Start with a concise overview of your clock web page project. Explain that it is a dynamic and interactive web page that displays the current time and updates in real-time.</p>
+          <p># the clock web page is designed to be responsive, ensuring it works well on various devices, including desktops, tablets, and smartphones.</p>
+          <p># Highlight that JavaScript is the primary language used for creating the clock's functionality. Mention how you utilized JavaScript's Date object or other libraries to achieve real-time updates.</p>
+          <a href="#" class="btn btn-primary" style="font-weight: bold; ">Go Time clock</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="./book1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: bold; ">Book Management Web Application</h5>
+          <p class="card-text"> Book Management Web application basicly am Developed a book management system to track book inventory and sales.</p>
+            <p># This project i am used technologies such as Java, JDBC Drivers, Servlets, JSP, MySQL and HTML, CSS.</p>
+            <p># Sole developer of the project Book Management Java Project.</p>
+            <p> # Designed and developed the book management system, created implemented the user interface using HTML, CSS and JavaScript.</p>
+            <a href="#" class="btn btn-primary" style="font-weight: bold; ">Go Book Shop</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    .Service h1{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 50px;
+    font-family: serif;
+  }
+  .offcanvas-body h5{
+    color: burlywood;
+  }
+</style>
+
+
+
+<div class="Service" id="Services"><h1>SERVICES </h1>
+<H2 style="text-align: center; color: #00bcd4; margin: 50px  50px; text-decoration: underline; font-family: sans-serif;font-weight: bold; "><span style="color: orange;font-weight: bold; ">Java 🍵</span> Full Stack Developer</H2></div>
+
+<div class="d-grid gap-2 col-6 mx-auto" style="padding: 50px 50px ;">
+      <button style="position: relative; bottom: 40px; font-weight: bold; " class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">Software Development</button>
+          <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+            <div class="offcanvas-header">
+               <h5 class="offcanvas-title" id="staticBackdropLabel">Introduction</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+    <div class="offcanvas-body">
+      <div>
+        <p>Welcome! I'm Valipi Chandu, an aspiring software developer with a strong passion for crafting cutting-edge solutions. Although I'm a fresher, I possess a solid foundation in Real-Estate and Book Management, and I am eager to apply my skills and contribute to real-world software development projects.</p>
+        <h4>Software Development Skills</h4>
+        <h5>Programming Languages</h5>
+        <p>I have proficiency in Java Programming language. Whether it's Java, SQL, or Web technology like HTML, CSS, JavaScript, I enjoy leveraging the power of code to create efficient and functional software solutions.</p>
+        <h5>Front-end Development</h5>
+        <p>I am skilled in front-end development technologies such as HTML, CSS, and JavaScript. I can transform design mockups into interactive and responsive user interfaces, ensuring a seamless user experience.</p>
+        <h5>Back-end Development</h5>
+        <p>I have experience in back-end development using technologies like Java, Core Jaba, J2EE JDBC, Hipernate, Servlets, JSP, String framework, Spring Boot. I am adept at designing and implementing robust server-side logic, database integration, and API development to support complex software applications.</p>
+        <h5>Problem Solving</h5>
+        <p>I possess strong problem-solving skills, allowing me to identify software-related challenges and devise effective solutions. I enjoy analyzing code, troubleshooting issues, and optimizing software performance to deliver high-quality and efficient solutions.</p>
+        <h5>Collaborative Development</h5>
+        <p>I value teamwork and thrive in collaborative development environments. I have experience working with version control systems like Git, participating in code reviews, and effectively communicating with team members to deliver successful projects.</p>
+        <h5>Java Full Stack Development</h5>
+        <p>8 Months doring time </p>
+        <p>Jspider Hebbal Branch Bangalore </p>
+        <p>Throughout the 8-month duration, I completed an intensive course that provided a comprehensive understanding of I am doing same realtime assessments and projects. The curriculum encompassed various topics, including Java, SQL, HTML, CSS, JavaScript, J2EE.</p>
+        <h5>Technical Skills</h5>
+        <p>Showcase your technical skills relevant to the technical support role. Include software, hardware, operating systems, and any specific tools or platforms you are familiar with.</p>
+        <h5>Education Philosophy </h5>
+        <p>As an aspiring educator, I am committed to creating an inclusive and student-centered learning environment. I believe in fostering a love for lifelong learning, cultivating curiosity, and encouraging students to think critically and creatively. My teaching philosophy emphasizes empathy, flexibility, and adapting instruction to meet the unique needs of each student.</p>
+        <h5>Contact Information</h5>
+        <p>If you have any questions or would like to discuss potential collaborations, feel free to contact me.</p>
+        <a href="#Contacts" class="btn btn-primary" style="font-weight: bold; ">Get Contact</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+   <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" style="font-weight: bold; ">Teaching</button>
+   <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Introduction</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+      <div class="offcanvas-body">
+        <p>Welcome! I'm Valipi Chandu, a passionate and enthusiastic aspiring educator. With a strong background in I am doing Bhashyam pvt School, I am dedicated to developing effective and captivating teaching content that sparks curiosity and promotes learning.</p>
+        <h4>Teaching Content</h4>
+        <h5>Lesson Plans and Activity Ideas</h5>
+        <p>I specialize in creating well-structured lesson plans and activity ideas for Telugu, Social, Java. My lesson plans are designed to cater to diverse learning needs, incorporating interactive elements, hands-on experiences, and differentiated instruction.</p>
+        <h5>Visual Presentations and Resources</h5>
+        <p>Through my design skills and creativity, I develop visually appealing presentations and educational resources. These resources are designed to engage students and facilitate their understanding of complex concepts through the use of graphics, infographics, and interactive visuals.</p>
+        <h5>Digital Tools Integration</h5>
+        <p> With a passion for educational technology, I explore innovative ways to integrate digital tools into teaching content. I create interactive online quizzes, gamified learning experiences, and engaging multimedia presentations that enhance student engagement and participation.</p>
+        <h5>Formative Assessment Strategies</h5>
+        <p>I believe in the power of formative assessment to guide instruction. I develop formative assessment strategies and tools, such as exit tickets, quick quizzes, and peer-assessment activities, to gather real-time feedback and adjust teaching methods accordingly.</p>
+        <h5>Collaborative Learning Activities</h5>
+        <p>Collaboration is key to fostering a positive learning environment. I design collaborative learning activities and projects that promote teamwork, critical thinking, and communication skills among students. These activities encourage active participation and help students develop a deeper understanding of the subject matter.</p>
+        <h5>Educational Philosophy</h5>
+        <p>As an aspiring educator, I am committed to creating an inclusive and student-centered learning environment. I believe in fostering a love for lifelong learning, cultivating curiosity, and encouraging students to think critically and creatively. My teaching philosophy emphasizes empathy, flexibility, and adapting instruction to meet the unique needs of each student.</p>
+        <h5>Contact Information</h5>
+        <p>If you have any questions or would like to discuss potential collaborations, feel free to contact me.</p>
+        <a href="#Contacts" class="btn btn-primary" style="font-weight: bold; ">Get Contact</a>
+      </div>
+  </div>
+
+
+    
+<button style="position: relative; top: 40px; font-weight: bold; " class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" >Technical Support</button>
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Introduction</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p> Welcome! I'm Valipi Chandu, an aspiring technical support specialist with a passion for problem-solving and assisting users with their technical needs. Although I'm a fresher, I possess a strong foundation in Java Full stack developer, and I am eager to apply my knowledge to provide reliable technical support.</p>
+    <h4>Technical Support Services</h4>
+    <h5>Issue Diagnosis and Troubleshooting</h5>
+    <p> I excel in diagnosing and resolving technical issues by analyzing symptoms, conducting research, and employing logical troubleshooting methodologies. I have a knack for quickly identifying the root cause of problems and implementing effective solutions.</p>
+    <h5>Software and Hardware Support</h5>
+    <p>With a comprehensive understanding of software and hardware components, I offer support for various operating systems, applications, and devices. I am skilled in guiding users through installations, configurations, and resolving compatibility issues.</p>
+    <h5>Remote Assistance and Customer Service</h5>
+    <p> I am experienced in providing remote assistance to users, offering prompt and courteous support via phone, email, or live chat. I prioritize excellent customer service, actively listening to users' concerns and offering clear instructions in a user-friendly manner.</p>
+    <h5>Documentation and Knowledge Base</h5>
+    <p>I understand the importance of creating and maintaining documentation to facilitate future support. I am adept at creating user-friendly guides, FAQs, and knowledge base articles that empower users to find solutions independently.</p>
+    <h5>Training and Onboarding Support</h5>
+    <p>I enjoy assisting users in adapting to new technologies. I provide training and onboarding support to help users navigate software applications, understand best practices, and maximize their productivity.</p>
+    <p>Although I'm a fresher, here are a few samples of my teaching content:</p>
+    <h5>Technical Skills</h5>
+    <p>Showcase your technical skills relevant to the technical support role. Include software, hardware, operating systems, and any specific tools or platforms you are familiar with.</p>
+    <h5>Educational Philosophy</h5>
+    <p>As an aspiring educator, I am committed to creating an inclusive and student-centered learning environment. I believe in fostering a love for lifelong learning, cultivating curiosity, and encouraging students to think critically and creatively. My teaching philosophy emphasizes empathy, flexibility, and adapting instruction to meet the unique needs of each student.</p>
+    <h5>Contact Information</h5>
+    <p>If you have any questions or would like to discuss potential collaborations, feel free to contact me.</p>
+    <a href="#Contacts" class="btn btn-primary" style="font-weight: bold; ">Get Contact</a>
+  </div>
+</div>
+
+
+
+<a style="position: relative; top: 80px;font-weight: bold; " class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Problem Solving</a>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Introduction</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <p> Welcome! I'm Valipi Chandu, an aspiring problem solver dedicated to tackling challenges with creativity and analytical thinking. Although I'm a fresher, I possess a strong foundation in [relevant coursework or projects], and I am eager to apply my problem-solving skills to real-world situations.</p>
+      <h4>Problem-Solving Skills Offered</h4>
+      <h5>Analytical Thinking</h5>
+      <p> I excel in breaking down complex problems into manageable components, analyzing data, and identifying patterns and relationships. I have a keen eye for detail and enjoy exploring multiple perspectives to gain a comprehensive understanding of the issues at hand.</p>
+      <h5>Creative Solutions</h5>
+      <p> I thrive on finding innovative solutions by thinking outside the box. I enjoy brainstorming and applying unconventional approaches to problem-solving, fostering an environment of creativity and adaptability.</p>
+      <h5>Research and Investigation</h5>
+      <p> I am adept at conducting thorough research to gather information and explore potential solutions. I utilize reliable sources, perform data analysis, and consult relevant experts to support informed decision-making.</p>
+      <h5>Collaborative Problem Solving</h5>
+      <p> I value collaboration and enjoy working in teams to solve complex problems. I actively listen to others, contribute ideas, and facilitate productive discussions to reach consensus and achieve effective outcomes.</p>
+      <h5>Continuous Learning</h5>
+      <p>I am committed to ongoing learning and improvement. I embrace challenges as opportunities for growth, and I eagerly explore new tools, technologies, and methodologies to expand my problem-solving toolkit.</p> 
+      <h5>Testimonials</h5>
+      <p>While I am just starting my journey, here are some testimonials from mentors and colleagues who have witnessed my problem-solving skills:</p>
+      <h5>Technical Skills</h5>
+      <p>Showcase your technical skills relevant to the technical support role. Include software, hardware, operating systems, and any specific tools or platforms you are familiar with.</p>
+      <h5>Educational Philosophy</h5>
+      <p>As an aspiring educator, I am committed to creating an inclusive and student-centered learning environment. I believe in fostering a love for lifelong learning, cultivating curiosity, and encouraging students to think critically and creatively. My teaching philosophy emphasizes empathy, flexibility, and adapting instruction to meet the unique needs of each student.</p>
+      <h5>Contact Information</h5>
+      <p>If you have any questions or would like to discuss potential collaborations, feel free to contact me.</p>
+      <a href="#Contacts" class="btn btn-primary" style="font-weight: bold; ">Get Contact</a>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+  
+
+
+
+
+
+
+<style>
+      .about-heading h1{
+    text-align: center;
+    padding-top: 80px;
+    font-size: 50px;
+    font-family: serif;
+  }
+</style>
+<div class="about-heading" id="Abouts" ><h1>ABOUT FOR ME</h1></div>
+
+<div class="card text-center">
+  <div class="card-body">
+    <h1 style="padding: 10px;font-family: sans-serif; ">Self. </h1>
+    <p class="card-text"> Welcome!
+    <p>My name is Valipi Chandu. I am besicaly Andhra Pradhesh in Chittoor distic. currently i am Staying in Bangalore. I did my graduation in BCA from Under Sri Venkateshwara University, Tirupati.</p>
+    <p>I did course Java Full Stack Developer. Jspiders from Hebbal Branch Bangalore.I successfully completed a comprehensive Java Full Stack Developer course that provided in-depth knowledge</p>
+    <p>and hands-on experience in building end-to-end web applications. The course covered essential topics such as front-end development, back-end development, and database integration.</p>
+    <p>My strengths are self Motivated and hard working. I belongs to my nuclear family we are four members in my Father mother Sister and Me. My short-term goal is to get a job in a reputed Company.</p>
+    <p>My Long-term goal is to achive a good position. where I can build my coreer. I am confident in my abilities and committed to continuous learning and growth. I am excited about the prospect </p>
+    <p>of joining our company and contributing to its success. Thank you for considering my application, and I look forward to discussing in more detail how I can be a valuable addition to your time.</p>
+    <p>Book Management Web application basicly i am Developed a book management system to track book inventory and sales.This project i am used technologies such as JDBC Drivers and</p>
+    <p>Servlets, JSP, MySQL and HTML, CSS. Sole developer of the project Book management. the book management system, created implemented the user interface using HTML and CSS.</p>
+
+    <p>Thant's all about me.</p>
+    <p style="padding-bottom: 20px;">Thank you🤝😊.</p>
+  </p>
+    <a href="#Contacts" class="btn btn-primary" style="font-family: serif;font-weight: bold; ">Hire Me</a>
+  </div>
+  <div class="card-footer text-body-secondary">
+    <div class="spinner-grow text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-secondary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-success" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-danger" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-warning" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-info" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-dark" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="contact" id="Contacts"  style="margin-top: 0px;">
+  <div class="content"><h2>Contact Us</h2>
+      <p>Fill out the form and memebr form our Developer get back to you within 24 Hours, or scroll down for more ways to get in touch.</p>
+  </div>
+  <div class="container">
+      <div class="contactInfo">
+          <div class="box">
+              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg></div>
+              <div class="text">
+                  <h3>Address</h3>
+                  <p>Bangalore <br>Nagawara road <br></p>
+              </div>
+          </div>
+          <div class="box">
+              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg></div>
+              <div class="text">
+                  <h3>Phone number</h3>
+                  <p>7995862043</p>
+              </div>
+          </div>
+          <div class="box">
+              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M112 160l144 112 144-112"/></svg></div>
+              <div class="text">
+                  <h3>Email </h3>
+                  <p>chanduchinnav@gmail.com</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="contactForm">
+        <form action="Message" id="dataForm">
+            <h2>Send message</h2>
+            <div class="inputbox">
+                <input type="text" name="name" id="name" >
+                <span>Full Name</span>
+            </div>
+            <div class="inputbox">
+                <input type="date" name="date" id="date" >
+            </div>
+            <div class="inputbox">
+                <input type="email" name="email" id="email" >
+                <span>Email</span>
+            </div>
+            <div class="inputbox">
+                <textarea type="text" name="message" id="message"></textarea>
+                <span>Type your message</span>
+            </div>  
+            <div class="inputbox">
+                <input type="submit"  id="Submit" value="Send" >
+            </div>
+        </form>
+    </div>
+    
+    </div>
+    </section>
+    
+    <script>
+    document.getElementById('dataForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+    
+      // Get the input data
+      const name = document.getElementById('name').value;
+      const date=document.getElementById('date').value;
+      const email = document.getElementById('email').value;
+      const message= document.getElementById('message').value;
+    
+      // Check if both input fields are filled
+      if (name.trim() !== '' && date.trim()!=='' && email.trim() !== '' && message.trim()!=='' ) {
+          // Data is present, show success alert
+          Swal.fire({
+              title: 'Success!',
+              text: 'Data is present in the input fields.',
+              icon: 'success',
+              position: 'center',
+              confirmButtonText: 'OK'
+          });
+      } else {
+          // Data is not present, show error alert
+          Swal.fire({
+              title: 'Error!',
+              text: 'Please fill in both input fields.',
+              icon: 'error',
+              position: 'center',
+              confirmButtonText: 'OK'
+          });
+      }
+    });
+    </script>
+
+
+
+
+
+
+
+ 
+
+
+<style>
+  .footer-links li {
+  display: inline;
+  margin-right: 15px;
+  }
+  
+  .footer-links li a:hover {
+  background-color:white;
+  color: black;
+  text-decoration: underline;
+  border-radius: -10px;
+  }
+  
+  .footer-links a {
+  color:blue;
+  text-decoration: none;
+  }
+  </style>
+  
+   <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title" style="font-weight: bold;">Want to hook better leads with hard Working Backend Developer.</h5>
+      <p class="card-text" style="font-size: large;">We work with client from all over. get in touch with us!</p>
+      <ul class="footer-links" style="font-weight: bold;">
+        <li><a href="#">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#Abouts">About</a></li>
+        <li><a href="#Contacts">Contact</a></li>
+        <li><a href="#Educations">Education</a></li>
+        <li><a href="./GALLERY.HTML">Gallery</a></li>
+      </ul>
+      <p class="card-text" style="font-weight: bold;">**Star</p>
+      <a href="#Contacts" class="btn btn-primary" style="font-weight: bold;">Hire Me</a>
+    </div>
+    <ul>
+     <a href="https://www.facebook.com/"> <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z" fill-rule="evenodd"/></svg></a>
+      <a href="https://www.linkedin.com/feed/"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z"/></svg></a>
+      <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den"> <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"/></svg></a>
+      <a href="https://www.google.com/"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M473.16 221.48l-2.26-9.59H262.46v88.22H387c-12.93 61.4-72.93 93.72-121.94 93.72-35.66 0-73.25-15-98.13-39.11a140.08 140.08 0 01-41.8-98.88c0-37.16 16.7-74.33 41-98.78s61-38.13 97.49-38.13c41.79 0 71.74 22.19 82.94 32.31l62.69-62.36C390.86 72.72 340.34 32 261.6 32c-60.75 0-119 23.27-161.58 65.71C58 139.5 36.25 199.93 36.25 256s20.58 113.48 61.3 155.6c43.51 44.92 105.13 68.4 168.58 68.4 57.73 0 112.45-22.62 151.45-63.66 38.34-40.4 58.17-96.3 58.17-154.9 0-24.67-2.48-39.32-2.59-39.96z"/></svg></a>
+    	<a href=" https://www.threads.net/@darkness_raja" ><img src="./Threads logo.png" height="50px " width="50px" alt=""></a>
+    </ul>
+    <p class="footer-copyright">&copy; 2023 Your Name. All rights reserved.</p>
+  </div>
+  
+ 
+  
+  
+  
+  
+  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+ 
+ 	 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+  </body>
+</html>

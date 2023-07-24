@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration.com</title>
+  <link rel="icon" href="./Star.logo.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding-top: 100px;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container h2 {
+      text-align: center;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="password"],
+    .form-group input[type="tel"],
+    .form-group input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .form-group input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .form-group input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    
+    .error {
+      color: red;
+      margin-top: 5px;
+    }
+    a{
+        padding-left: 43px;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    function validateForm() {
+      var username = document.forms["registrationForm"]["username"].value;
+      var password = document.forms["registrationForm"]["username"].value;
+      var password = document.forms["registrationForm"]["password"].value;
+      var email = document.forms["registrationForm"]["email"].value;
+      
+      if (username === "" || password === "" || email === "") {
+        document.getElementById("error-message").innerHTML = "Please fill in all fields.";
+        var tag= document.getElementById("username")
+        tag.style.color="red"
+        var tag= document.getElementById("username3")
+        tag.style.color="red"
+        var lab=document.getElementById("username1")
+        lab.style.color="red"
+        var lab=document.getElementById("username2")
+        lab.style.color="red"
+        return false;
+      }
+      
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.match(emailRegex)) {
+        document.getElementById("error-message").innerHTML = "Please enter a valid email address.";
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Registration</h2>
+    <form  action="Register" name="registrationForm" method="POST" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label for="username" id="username">Full Name</label>
+        <input type="text" id="username" name="username" >
+      </div>
+      <div class="form-group">
+        <label for="username" id="username3">Mobile Number</label>
+        <input type="tel" id="username" name="username" >
+      </div>
+      <div class="form-group">
+        <label for="email" id="username2">Email</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="password" id="username1">Password</label>
+        <input type="password" id="password" name="password" >
+      </div>
+    
+      <div class="form-group">
+        <input type="submit" value="Register">
+      </div>
+      <div id="error-message" class="error"></div>
+      <div> <span>If you have Account Click to</span><a href="./LOGIN.html">Login?</a></div>
+    </form>
+  </div>
+</body>
+</html>

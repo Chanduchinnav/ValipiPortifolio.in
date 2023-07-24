@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.contaner-image{
+    display: block;
+    padding: 10px;
+    flex-basis: 100%;
+    border-radius: 20%;
+}
+@media only screen and(max-width:576px)  {
+    .contaner-image{
+        flex-basis: 100%;
+        /* box-sizing: border-box; */
+    }
+}
+
+@media only screen and (min-width:640px)  {
+    .contaner-image{
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (min-width:960px)  {
+    .contaner-image{
+        flex-basis: 30%;
+    }
+}
